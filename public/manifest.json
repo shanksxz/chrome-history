@@ -1,0 +1,12 @@
+{
+    "name" : "active_time",
+    "description" : "chrome extension to track active time on a website",
+    "version" : "1.0",
+    "manifest_version" : 3,
+    "chrome_url_overrides" : {
+        "history": "index.html"
+    },
+    "permissions" : [
+        "history"
+    ]
+}
