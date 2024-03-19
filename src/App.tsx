@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 const App = () => {
 
@@ -21,16 +23,17 @@ const App = () => {
   }, [text]);
 
   return (
-    <div>
+    <div className="bg-black text-white">
       <h1>History</h1>
       <div>
         <form className="flex p-2 gap-5" action="">
-          <input 
-            type="text" 
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            placeholder="Search history"/>
-            <button className='p-2 rounded-sm'>Search</button>
+            <Input 
+              type="text" 
+              value={text} 
+              onChange={(e) => setText(e.target.value)} 
+              placeholder="Search"
+            />
+            <Button type="submit">Search</Button>
         </form>
 
         <div>
